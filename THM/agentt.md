@@ -1,5 +1,5 @@
 
-# TryHackme AgentT Write-up
+# TryHackme Agent T Write-up
 
 Below is my write up for the room [Agent T](https://tryhackme.com/room/agentt).
 
