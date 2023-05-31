@@ -7,6 +7,7 @@ The machine is an easy machine to break.
 We first start up the machine and run a `nmap` to see if there is 
 
 ```bash
+curl http://10.10.121.11 | grep alt= | cut -d "=" -f 3 | cut -d ' ' -f 1
 
 ```
 
@@ -52,13 +53,17 @@ import hashlib,string
 # creates a string with all with all ascii letter and digits
 all_characters = string.ascii_letters+string.digits
 
-# for each character
+
+
+# We can create a wordlist using all the chararcters to use as a wordlist. This can be used in gobuster. We convert all characters into a MD5 hash. The output is then save to wordlist.txt 
 wordlist_file = open("wordlist.txt","w")
 
-# We can create a workd list using all the chararcters to use as a wordlist.
 for character in all_characters:
+
     print(hashlib.md5(character.encode()).hexdigest())
+    
     wordlist_file.write(hashlib.md5(character.encode()).hexdigest()+"\n")
+
 wordlist_file.close()
 
 ```
