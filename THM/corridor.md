@@ -1,16 +1,31 @@
-# TryHackMe Corridor Write-up
+# TryHackMe Corridor Write-up (Still to update)
 
 Below is my write-up for the TryHackMe room [Corridor](https://tryhackme.com/room/corridor).
 
 The machine is an easy machine to break.
 
-We first start up the machine and run a `nmap` to see if there is 
+We first start up the machine and run a `nmap` to see if there is any services. 
+
+We can see port '80'.
+
+Lets open the page in firefox.
+
+![Landingpage](/THM/Images/Corridor/THMCorridorLandingpage.png)
+
+Nothing much we can see but lets look at the source code.
+
+![Gobusterresults](/THM/Images/Corridor/THMCorridorGobuster.png)
+
+We see somethign interesting under the source code of the webpage. Lets extract as they seem like hashes. Lets use 'curl' to extract the hashes.
 
 ```bash
 curl http://10.10.121.11 | grep alt= | cut -d "=" -f 3 | cut -d ' ' -f 1
 
 ```
 
+![Curlextract](/THM/Images/Corridor/THMCorridorCurl.png)
+
+Now lets decrypt the hashes using a quick python script. 
 
 ```python
 
@@ -68,5 +83,5 @@ wordlist_file.close()
 
 ```
 
-
+.
 
