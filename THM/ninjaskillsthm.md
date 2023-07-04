@@ -1,6 +1,6 @@
 # Tryhackme - Ninja Skills Writeup
 
-The following is my write up for [THM Ninja Skills](https://tryhackme.com/room/ninjaskills). Overall a good little small room to practice unix commands. I took a different approach as I wanted to pratice some bash scripting.
+The following is my write up for [THM Ninja Skills](https://tryhackme.com/room/ninjaskills). Overall a good little small room to practice Unix commands. I took a different approach as I wanted to practice some bash scripting.
 
 # Task
 
@@ -23,7 +23,7 @@ Answer the questions about the following files:
 
 The aim is to answer the questions as efficiently as possible.
 
-Answer the questions below
+Answer the questions below.
 
 Which of the above files are owned by the best-group group(enter the answer separated by spaces in alphabetical order)
 >D8B3 v2Vb
@@ -49,7 +49,7 @@ Which file is executable by everyone?
 
 # bash script
 
-I focused on creating a bash that would return all my solutions. The only file not returned was file containing 230 lines. It didn't exist in my instance. 
+I focused on creating a bash that would return all my solutions. The only file not returned was a file containing 230 lines. It didn't exist in my instance. 
 
 
 ```bash 
@@ -57,7 +57,7 @@ I focused on creating a bash that would return all my solutions. The only file n
 
 ## !/bin/bash
 
-## generate a list
+## Generate a list
 listfiles="8V2L bny0 c4ZX D8B3 FHl1 oiMO PFbD rmfX SRSq uqyw v2Vb X1Uy";
 echo "Start of Program"
 echo ""
